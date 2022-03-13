@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row" style="padding: 10px 150px 150px 150px;">
+
+    <ng-container *ngFor="let product of productsList">
+
+      <div class="itemCard col-sm-3">
+
+        <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{product.title}}</p>
+
+        <img mat-card-image src={{product.image}} alt="Photo of a Shiba Inu">
+
+        <p style="color: red;"> Price: {{product.price | currency:'INR'}} </p>
+        <p> Rating:{{product.rating.rate}} <span>
+            Count:{{product.rating.count}} </span> </p>
+
+
+        <button mat-button style="background-color: salmon;border-radius: 5px;"
+          (click)="getProductDetail(product.id)">show details</button>
+
+      </div>
+
+    </ng-container>
+
+  </div>
+</div>

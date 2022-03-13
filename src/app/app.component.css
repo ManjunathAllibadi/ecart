@@ -1,0 +1,45 @@
+
+.nav1{
+    display: flex;
+    justify-content: space-between;
+    background-color: lightskyblue;
+
+}
+.serach-input-div{
+    width: 30%;
+    padding-top: 10px;
+}
+.search-input{
+    padding: 0.5rem 0.7rem;
+    outline:none;
+    border:1px solid #b2bec3;
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.1s;
+}
+
+.search-input:focus{
+    border: 2px solid #3498db;
+}
+
+.icons{
+    padding-top: 10px;
+    margin-right: 40px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+.cart-badge{
+    padding-right: 25px;
+    font-size: 35px;
+}
+.user-icon{
+    padding-left: 10px;
+    font-size: 35px;
+}
+
+.mat-icon{
+    margin: 5px;
+}
+
+

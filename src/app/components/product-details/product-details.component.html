@@ -1,0 +1,37 @@
+<div class="container">
+
+<div class="row"  *ngIf="product">
+    <div class="col-sm-8">
+        <mat-card style="margin: 10px;width: 100%;">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img class="prod-image"  mat-card-image src={{product.image}} >
+                </div>
+                <div class="col-sm-8">
+                    <div>
+                        <h1>{{product.category}}</h1>
+                        <br>
+                        <h3>
+                            {{product.title}}
+                        </h3>
+                        <br>
+                        <p style="color: red;">Price: {{product.price}} </p>
+
+                        <p>Rating:{{product.rating.rate}} <span
+                                style="justify-content: space-between;">Count:{{product.rating.count}} </span> </p>
+                        <p style="font-size: small;"> <b><strong>Description: </strong></b>{{product.description}}</p>
+                    </div>
+                    <div>
+                        <button  mat-raised-button color="accent" (click)="addItemToCart()">Add to cart</button>
+                    </div>
+
+                </div>
+            </div>
+        </mat-card>
+
+    </div>
+    <div class="col-sm-4">
+
+    </div>
+</div>
+</div>

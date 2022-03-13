@@ -1,0 +1,31 @@
+<div class="nav2" fxLayout="row wrap">
+    <div class="item" *ngFor="let category of categories; let i = index;" (click)="getAllProducts(category, i)" [ngClass]="{'highlight': selectedIndex === i}">{{category | uppercase}}</div>
+</div>
+
+<div class="container" *ngIf="showAllItems">
+  <div class="row">
+    <input class="search-input" type="text" name="" [(ngModel)]="term" placeholder="Search here">
+  </div>
+    <div class="row" style="padding: 10px 150px 150px 150px;">
+  
+      <ng-container *ngFor="let product of allProducts | filter:term ">
+  
+        <div class="itemCard col-sm-3">
+  
+          <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{product.title}}</p>
+  
+          <img mat-card-image src={{product.image}} alt="Photo of a Shiba Inu">
+  
+          <p> Price: {{product.price | currency:'INR'}} </p>
+          <p> Rating:{{product.rating.rate}} <span>
+              Count:{{product.rating.count}} </span> </p>
+        </div>
+  
+      </ng-container>
+  
+    </div>
+  </div>
+
+<div>
+    <router-outlet></router-outlet>
+</div>
